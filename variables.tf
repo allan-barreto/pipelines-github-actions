@@ -1,5 +1,5 @@
 variable "location" {
-  description = "Variável que indica a região onde os recursos vão ser criados"
+  description = "Variable that indicates where the resources will be created"
   type        = string
-  default     = "West Europe"
+  default     = "East US"
 }
