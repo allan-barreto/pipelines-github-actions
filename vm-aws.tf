@@ -1,6 +1,6 @@
 resource "aws_key_pair" "key" {
   key_name   = "aws-key"
-  public_key = AWS_PUBLIC_KEY
+  public_key = var.AWS_PUBLIC_KEY
 }
 
 resource "aws_instance" "vm" {
