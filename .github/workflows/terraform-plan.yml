@@ -21,12 +21,12 @@ jobs:
 
       - name: Terraform init
         run: terraform init
+        env:
+          TF_VAR_aws_pub_key: ${{secrets.AWS_PUBLIC_KEY}}
+          TF_VAR_azure_pub_key: ${{secrets.AZURE_PUBLIC_KEY}}
 
       - name: Terraform validate
         run: terraform validate
 
       - name: Terraform Plan
         run: terraform plan
-        env:
-          TF_VAR_aws_pub_key: ${{secrets.AWS_PUBLIC_KEY}}
-          TF_VAR_azure_pub_key: ${{secrets.AZURE_PUBLIC_KEY}}
