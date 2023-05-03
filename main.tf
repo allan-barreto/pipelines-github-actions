@@ -1,6 +1,9 @@
 terraform {
 
   required_version = ">= 1.0.0"
+ 
+}
+
 
 provider "aws" {
   region = "us-east-1"
@@ -19,6 +22,4 @@ data "terraform_remote_state" "vpc" {
     key    = "aws-vpc/terraform.tfstate"
     region = "us-east-1"
   }
-}
-
 }
